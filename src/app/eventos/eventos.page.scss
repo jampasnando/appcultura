@@ -1,0 +1,43 @@
+.cabecera{
+    text-align: center;
+}
+.cabecera img:first-child{
+    height: 3em;
+}
+.cabecera img:nth-child(2){
+    height: 1em;
+    position: relative;
+    top: -0.5em;
+}
+.cabecera img:nth-child(3){
+    height: 2.5em;
+    margin-left: 2.5em;
+}
+ion-content{
+    --ion-background-color: #35313d;
+}
+ion-row ion-col:first-child div:first-child{
+    color: white;
+    font-family: Georgia;
+    font-size: 1em;
+}
+ion-row ion-col:first-child div:nth-child(2){
+    color: white;
+    font-family: 'Lucida Sans';
+    font-size: 0.8em;
+}
+ion-row ion-col:first-child div:nth-child(3){
+    color: white;
+    font-family: 'Lucida Sans';
+    font-size: 0.8em;
+}
+ion-grid{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+ion-row ion-col:nth-child(2){
+    text-align: right;
+}
+ion-row{
+    margin-top: 20px;
+}

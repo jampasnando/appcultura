@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+    <div class="cabecera">
+      <img src="/assets/images/escudo.png" alt="">
+      <img src="/assets/images/gobciudad.png" alt=""> 
+      <img src="/assets/images/unidoscrecemos.png" alt="">
+    </div>
+    </ion-toolbar>
+    
+  </ion-header>
+
+<ion-content>
+    <div><img src="{{this.argumento}}" alt=""></div>
+    <ion-grid>
+      <ion-row *ngFor="let unevento of eventos;let i=index">
+        <ion-col size="10">
+          <div>{{unevento.que.toUpperCase()}}</div>
+          <div>{{unevento.cuando}}</div>
+          <div>{{unevento.hora}} {{unevento.donde}}</div>
+        </ion-col>
+        <ion-col size="2" routerLink="/mapa"><img src="/assets/images/marcador.png" alt=""></ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

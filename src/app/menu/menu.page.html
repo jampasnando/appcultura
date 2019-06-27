@@ -11,20 +11,20 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col><img src="/assets/images/danza.png" alt=""><div>Danza</div></ion-col>
-      <ion-col><img src="/assets/images/musica.png" alt=""><div>Música</div></ion-col>
+      <ion-col [routerLink]="['/eventos','danza']"><img src="/assets/images/danza.png" alt=""><div>Danza</div></ion-col>
+      <ion-col [routerLink]="['/eventos','musica']"><img src="/assets/images/musica.png" alt=""><div>Música</div></ion-col>
     </ion-row>
     <ion-row>
-        <ion-col><img src="/assets/images/teatro.png" alt=""><div>Teatro</div></ion-col>
-        <ion-col><img src="/assets/images/cine.png" alt=""><div>Cine</div></ion-col>
+        <ion-col [routerLink]="['/eventos','teatro']"><img src="/assets/images/teatro.png" alt=""><div>Teatro</div></ion-col>
+        <ion-col [routerLink]="['/eventos','cine']"><img src="/assets/images/cine.png" alt=""><div>Cine</div></ion-col>
     </ion-row>
     <ion-row>
-        <ion-col><img src="/assets/images/sociedad.png" alt=""><div>Sociedad</div></ion-col>
-        <ion-col><img src="/assets/images/literatura.png" alt=""><div>Literatura</div></ion-col>
+        <ion-col [routerLink]="['/eventos','sociedad']"><img src="/assets/images/sociedad.png" alt=""><div>Sociedad</div></ion-col>
+        <ion-col [routerLink]="['/eventos','literatura']"><img src="/assets/images/literatura.png" alt=""><div>Literatura</div></ion-col>
     </ion-row>
     <ion-row>
-        <ion-col><img src="/assets/images/exposiciones.png" alt=""><div>Exposiciones</div></ion-col>
-        <ion-col><img src="/assets/images/especiales.png" alt=""><div>Especiales</div></ion-col>
+        <ion-col [routerLink]="['/eventos','exposiciones']"><img src="/assets/images/exposiciones.png" alt=""><div>Exposiciones</div></ion-col>
+        <ion-col [routerLink]="['/eventos','especiales']"><img src="/assets/images/especiales.png" alt=""><div>Especiales</div></ion-col>
     </ion-row>
   </ion-grid>
   <div class="gestion"><div>2019</div></div>

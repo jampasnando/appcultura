@@ -1,0 +1,15 @@
+.cabecera{
+    text-align: center;
+}
+.cabecera img:first-child{
+    height: 3em;
+}
+.cabecera img:nth-child(2){
+    height: 1em;
+    position: relative;
+    top: -0.5em;
+}
+.cabecera img:nth-child(3){
+    height: 2.5em;
+    margin-left: 2.5em;
+}
