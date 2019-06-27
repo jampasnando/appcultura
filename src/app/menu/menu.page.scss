@@ -1,0 +1,72 @@
+.cabecera{
+    text-align: center;
+}
+.cabecera img:first-child{
+    height: 3em;
+}
+.cabecera img:nth-child(2){
+    height: 1em;
+    position: relative;
+    top: -0.5em;
+}
+.cabecera img:nth-child(3){
+    height: 2.5em;
+    margin-left: 2.5em;
+}
+ion-content{
+    --ion-background-color: #35313d;
+}
+ion-grid{
+    padding-left: 3.7em;
+    padding-right: 3.7em;
+}
+ion-col{
+    text-align: center;
+    
+}
+ion-col img{
+    height: 5em;
+}
+ion-col div{
+    position: relative;
+    color: white;
+    font-family: Impact;
+    font-size: 1.3em;
+    // font-weight: bold;
+    top: -8px;
+}
+
+.gestion{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    height: 30px;
+    width: 100px;
+      background: #ed8147;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #ed8147, #eb6d2f);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #ed8147, #eb6d2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    border-radius: 25px 0 0 25px;
+}
+
+.gestion div{
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    font-family: Impact;
+    line-height: 1.1em;
+  //   font-weight: bold;
+}
+.mes{
+    background: #eb6d2f;
+    color: #522a48;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family:Verdana;
+    font-size: 1.8em;
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+}
