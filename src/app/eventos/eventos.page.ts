@@ -6,7 +6,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./eventos.page.scss'],
 })
 export class EventosPage implements OnInit {
-  argumento:string;
+  portada:string;
+  mes:string;
+  idcat:string;
   eventos:Eventos[]=[
     {
       "que":"Danza1 de folk dance y jazz...",
@@ -38,8 +40,10 @@ export class EventosPage implements OnInit {
   constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
-    this.argumento=this.activatedRoute.snapshot.paramMap.get('evento');
-    console.log(this.argumento);
+    this.portada=this.activatedRoute.snapshot.paramMap.get('portada');
+    this.mes=this.activatedRoute.snapshot.paramMap.get('mes');
+    this.idcat=this.activatedRoute.snapshot.paramMap.get('idcat');
+    console.log("portada: ", this.portada," mes: ", this.mes, " idcat: ",this.idcat);
   }
 
 }

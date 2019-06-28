@@ -8,7 +8,7 @@ import {GLOBAL} from '../global';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  argumento:string;
+  mes:string;
   nrocat:number;
   limite:number;
   nros=[];
@@ -18,9 +18,9 @@ export class MenuPage implements OnInit {
   constructor(private activatedRoute:ActivatedRoute,private categoriaService:CategoriasService) { }
 
   ngOnInit() {
-    this.argumento=this.activatedRoute.snapshot.paramMap.get('mes');
-    console.log(this.argumento);
-    this.llamaservicio(this.argumento);
+    this.mes=this.activatedRoute.snapshot.paramMap.get('mes');
+    console.log(this.mes);
+    this.llamaservicio(this.mes);
   }
   llamaservicio(mes:string){
     console.log("se recibio en llamaservicio: ",mes);
@@ -32,11 +32,6 @@ export class MenuPage implements OnInit {
         console.log("una cat: ", unacat.nombre," su imagen: ",unacat.imagen);
       }
       this.nrocat=data.data.length;
-      // console.log("nrocat: ",this.nrocat);
-      // console.log("modal 8%2: ",8%2);
-      // console.log("modal 9%2: ",9%2);
-      // console.log("division 8/2: ",Math.floor(8/2));
-      // console.log("division 9/2: ",Math.floor(9/2));
       if((this.nrocat%2)==0){
         this.limite=Math.floor(this.nrocat/2);
       }

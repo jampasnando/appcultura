@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { GLOBAL } from '../global';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,6 @@ export class CategoriasService {
     const   params:FormData=new FormData();
     params.append("mes",mes);
     console.log("el servicio enviará: ",mes);
-    return this.httpClient.post<any>('http://192.168.220.106/municipio/public/cultura/getcategorias',params);
+    return this.httpClient.post<any>(GLOBAL.servicios.concat('getcategorias'),params);
   }
 }
