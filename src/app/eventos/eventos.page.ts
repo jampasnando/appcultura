@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-eventos',
   templateUrl: './eventos.page.html',
@@ -39,7 +38,7 @@ export class EventosPage implements OnInit {
   constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
-    this.argumento='/assets/images/img'.concat(this.activatedRoute.snapshot.paramMap.get('evento')).concat('.png');
+    this.argumento=this.activatedRoute.snapshot.paramMap.get('evento');
     console.log(this.argumento);
   }
 

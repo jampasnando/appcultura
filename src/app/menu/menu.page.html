@@ -10,11 +10,11 @@
 
 <ion-content>
   <ion-grid>
-    <ion-row>
-      <ion-col [routerLink]="['/eventos','danza']"><img src="/assets/images/danza.png" alt=""><div>Danza</div></ion-col>
-      <ion-col [routerLink]="['/eventos','musica']"><img src="/assets/images/musica.png" alt=""><div>Música</div></ion-col>
+    <ion-row *ngFor="let x of nros;let i=index">
+      <ion-col [routerLink]="['/eventos',datos[2*i].portada]"><img src="{{datos[2*i].imagen}}" alt=""><div>{{datos[2*i].nombre}}</div></ion-col>
+      <ion-col [routerLink]="['/eventos',datos[x+i].portada]"><img src="{{datos[x+i].imagen}}" alt=""><div>{{datos[x+i].nombre}}</div></ion-col>
     </ion-row>
-    <ion-row>
+   <!-- <ion-row>
         <ion-col [routerLink]="['/eventos','teatro']"><img src="/assets/images/teatro.png" alt=""><div>Teatro</div></ion-col>
         <ion-col [routerLink]="['/eventos','cine']"><img src="/assets/images/cine.png" alt=""><div>Cine</div></ion-col>
     </ion-row>
@@ -25,7 +25,7 @@
     <ion-row>
         <ion-col [routerLink]="['/eventos','exposiciones']"><img src="/assets/images/exposiciones.png" alt=""><div>Exposiciones</div></ion-col>
         <ion-col [routerLink]="['/eventos','especiales']"><img src="/assets/images/especiales.png" alt=""><div>Especiales</div></ion-col>
-    </ion-row>
+    </ion-row> -->
   </ion-grid>
   <div class="gestion"><div>2019</div></div>
   <div class="mes"><div>MARZO</div></div>

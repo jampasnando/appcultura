@@ -36,7 +36,10 @@ ion-grid{
     padding-right: 1.5em;
 }
 ion-row ion-col:nth-child(2){
-    text-align: right;
+    // text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 ion-row{
     margin-top: 20px;

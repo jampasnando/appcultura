@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MenuPage } from './menu.page';
+import { CategoriasService } from '../service/categorias.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -19,8 +21,12 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule
   ],
-  declarations: [MenuPage]
+  declarations: [MenuPage],
+  providers:[
+    CategoriasService
+  ]
 })
 export class MenuPageModule {}
