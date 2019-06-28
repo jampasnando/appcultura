@@ -10,7 +10,13 @@
   </ion-header>
 
 <ion-content>
-    <div><img src="{{this.portada}}" alt=""></div>
+    <div class="portada">
+      <img src="{{this.portada}}" alt="">
+      <div class="titportada">
+        <div>{{this.nombre}}</div>
+        <div>{{this.nroeventos}} Eventos</div>
+      </div>
+    </div>
     <ion-grid>
       <ion-row *ngFor="let unevento of datos;let i=index">
         <ion-col size="10">

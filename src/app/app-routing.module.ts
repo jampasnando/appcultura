@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaPageModule' },
   { path: 'menu/:mes', loadChildren: './menu/menu.module#MenuPageModule' },
-  { path: 'eventos/:portada/:mes/:idcat', loadChildren: './eventos/eventos.module#EventosPageModule' },
+  { path: 'eventos/:portada/:mes/:idcat/:nombre', loadChildren: './eventos/eventos.module#EventosPageModule' },
   { path: 'mapa/:latlng', loadChildren: './mapa/mapa.module#MapaPageModule' },
 ];
 

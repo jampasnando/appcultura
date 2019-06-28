@@ -44,3 +44,21 @@ ion-row ion-col:nth-child(2){
 ion-row{
     margin-top: 20px;
 }
+.portada{
+    position: relative;
+    background:rgba(220,20,60,0.5)
+}
+.titportada{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color:white;
+    padding-top: 10px;
+    background:rgba(139,0,0,0.4)
+}
+.titportada div:first-child{
+    font-family: Caveat;
+    font-size: 4.5em;
+}
