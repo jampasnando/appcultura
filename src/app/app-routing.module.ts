@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaPageModule' },
   { path: 'menu/:mes', loadChildren: './menu/menu.module#MenuPageModule' },
   { path: 'eventos/:portada/:mes/:idcat', loadChildren: './eventos/eventos.module#EventosPageModule' },
-  { path: 'mapa', loadChildren: './mapa/mapa.module#MapaPageModule' },
+  { path: 'mapa/:latlng', loadChildren: './mapa/mapa.module#MapaPageModule' },
 ];
 
 @NgModule({

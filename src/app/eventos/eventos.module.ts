@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { EventosPage } from './eventos.page';
+import { EventosService } from '../service/eventos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -19,8 +21,12 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    HttpClientModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [EventosPage]
+  declarations: [EventosPage],
+  providers:[
+    EventosService
+  ]
 })
 export class EventosPageModule {}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Map, latLng, tileLayer, Layer, icon,marker } from 'leaflet';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mapa',
@@ -8,6 +9,10 @@ import { Map, latLng, tileLayer, Layer, icon,marker } from 'leaflet';
 })
 export class MapaPage implements OnInit {
   map:Map;
+  lat:number;
+  lng:number;
+  coord:string;
+  vector=[];
   myIcon = icon({
     iconUrl: 'assets/images/myicon.png',
     iconSize: [38, 95],
@@ -17,19 +22,26 @@ export class MapaPage implements OnInit {
     shadowSize: [68, 95],
     shadowAnchor: [22, 94]
   });
-  constructor() { }
+  constructor(private activatedRoute:ActivatedRoute) { }
   leafletMap() {
     console.log("boton");
-    this.map = new Map('mimapa').setView([-17.5555,-66.5555], 15);
+    this.map = new Map('mimapa').setView([this.lat,this.lng], 15);
 
     tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     }).addTo(this.map);
 
-    const markPoint = marker([-17.5555,-66.5555],{icon:this.myIcon});
+    const markPoint = marker([this.lat,this.lng],{icon:this.myIcon});
     // markPoint.bindPopup(this.subAlcadias[this.datos].title);
     this.map.addLayer(markPoint);
   }
   ngOnInit() {
+    this.coord=this.activatedRoute.snapshot.paramMap.get("latlng");
+    this.vector=this.coord.split(",");
+    this.lat=parseFloat(this.vector[0]);
+    this.lng=parseFloat(this.vector[1]);
+    console.log("coordenada recibidas: ",this.coord);
+    console.log("lat: ",this.lat);
+    console.log("lng: ",this.lng);
     setTimeout(function(){
       document.getElementById("btnmapa").click(); 
     }, 1500);
