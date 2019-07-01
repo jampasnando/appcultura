@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GestionService } from '../service/gestion.service';
 
 @Component({
   selector: 'app-agenda',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agenda.page.scss'],
 })
 export class AgendaPage implements OnInit {
-
-  constructor() { }
+  gestion='';
+  constructor(private gestionService:GestionService) { }
 
   ngOnInit() {
+    this.llamaServicioGestion();
   }
-
+  llamaServicioGestion(){
+    this.gestionService.obtieneGestion().subscribe((data:any)=>{
+      console.log("gestion desde servicio: ",data[0].gestion);
+      this.gestion=data[0].gestion;
+    });
+  }
 }

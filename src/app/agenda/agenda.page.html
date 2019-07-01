@@ -1,60 +1,60 @@
-<ion-content>
+<ion-content no-bounce>
     <div class="page-centered-element">
       <div class="contenido">
         <div class="divimg"><img src="/assets/images/artex.png" alt=""></div>
         <div class="meses">
           <div class="m1">
             <div class="a"></div>
-            <div class="redondo" [routerLink]="['/menu',1]">ENE</div>
+            <div class="redondoa" [routerLink]="['/menu',1,gestion]">ENE</div>
           </div>
           <div class="m2">
             <div class="a"></div>
-            <div class="redondo">FEB</div>
+            <div class="redondoa" [routerLink]="['/menu',2,gestion]">FEB</div>
           </div>
           <div class="m3">
             <div class="a"></div>
-            <div class="redondo">MAR</div>
+            <div class="redondoa" [routerLink]="['/menu',3,gestion]">MAR</div>
           </div>
           <div class="m4">
             <div class="a"></div>
-            <div class="redondo">ABR</div>
+            <div class="redondoa" [routerLink]="['/menu',4,gestion]">ABR</div>
           </div>
           <div class="m5">
               <div class="a"></div>
-              <div class="redondo">MAY</div>
+              <div class="redondoa" [routerLink]="['/menu',5,gestion]">MAY</div>
           </div>
           <div class="m6">
             <div class="a"></div>
-            <div class="redondo" [routerLink]="['/menu',6]">JUN</div>
+            <div class="redondoa" [routerLink]="['/menu',6,gestion]">JUN</div>
           </div>
         </div>
         <div class="meses2">
             <div class="m7">
-              <div class="a"></div>
-              <div class="redondo">JUL</div>
+              <div class="b"></div>
+              <div class="redondob" [routerLink]="['/menu',7,gestion]">JUL</div>
             </div>
             <div class="m8">
-              <div class="a"></div>
-              <div class="redondo">AGO</div>
+              <div class="b"></div>
+              <div class="redondob" [routerLink]="['/menu',8,gestion]">AGO</div>
             </div>
             <div class="m9">
-              <div class="a"></div>
-              <div class="redondo">SEP</div>
+              <div class="b"></div>
+              <div class="redondob"  [routerLink]="['/menu',9,gestion]">SEP</div>
             </div>
             <div class="m10">
-              <div class="a"></div>
-              <div class="redondo">OCT</div>
+              <div class="b"></div>
+              <div class="redondob" [routerLink]="['/menu',10,gestion]">OCT</div>
             </div>
             <div class="m11">
-                <div class="a"></div>
-                <div class="redondo">NOV</div>
+                <div class="b"></div>
+                <div class="redondob" [routerLink]="['/menu',11,gestion]">NOV</div>
             </div>
             <div class="m12">
-              <div class="a"></div>
-              <div class="redondo">DIC</div>
+              <div class="b"></div>
+              <div class="redondob" [routerLink]="['/menu',12,gestion]">DIC</div>
             </div>
           </div>
-          <div class="gestion"><div>2019</div></div>
+          <div class="gestion"><div>{{this.gestion}}</div></div>
       </div>
     </div>
     

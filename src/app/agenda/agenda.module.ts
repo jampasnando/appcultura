@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { AgendaPage } from './agenda.page';
+import { GestionService } from '../service/gestion.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -19,8 +21,12 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    HttpClientModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AgendaPage]
+  declarations: [AgendaPage],
+  providers:[
+    GestionService
+  ]
 })
 export class AgendaPageModule {}

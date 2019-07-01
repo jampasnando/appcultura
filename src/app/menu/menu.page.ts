@@ -9,16 +9,19 @@ import {GLOBAL} from '../global';
 })
 export class MenuPage implements OnInit {
   mes:string;
+  gestion:string;
   nrocat:number;
   limite:number;
   nros=[];
   i=0;
   primeraimagen='';
   datos:any[];
+  meses=['','ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
   constructor(private activatedRoute:ActivatedRoute,private categoriaService:CategoriasService) { }
 
   ngOnInit() {
     this.mes=this.activatedRoute.snapshot.paramMap.get('mes');
+    this.gestion=this.activatedRoute.snapshot.paramMap.get('gestion');
     console.log(this.mes);
     this.llamaservicio(this.mes);
   }

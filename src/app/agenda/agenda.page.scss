@@ -1,3 +1,6 @@
+ion-content{
+  --ion-background-color: #35313d;
+}
 .page-centered-element {
     position: absolute;
     left: 0;
@@ -55,7 +58,18 @@
     border-radius:25px 25px;
     z-index: 1;
   }
-  .redondo{
+  div.b {
+    right: 0;
+    top:0;
+    width: 30px;
+    height: 87px;
+    -ms-transform: rotate(28deg); /* IE 9 */
+    -webkit-transform: rotate(28deg); /* Safari 3-8 */
+    transform: rotate(28deg);
+    border-radius:25px 25px;
+    z-index: 1;
+  }
+  .redondoa{
       border-radius:100% 100%;
       background:white;
       position: absolute;;
@@ -70,6 +84,21 @@
       color:black;
       z-index: 2;
   }
+  .redondob{
+    border-radius:100% 100%;
+    background:white;
+    position: absolute;;
+    top:0;
+    left: 10px;
+    width:32px;
+    height:32px;
+    text-align:center;
+    word-wrap: normal;
+    font-size: 0.8em;
+    line-height:2.3em;
+    color:black;
+    z-index: 2;
+}
   .m1,.m2,.m3,.m4,.m5,.m6{
       position:relative;
       display:inline-block;
@@ -106,6 +135,7 @@
     position:relative;
     display:inline-block;
     width:30px;
+    left: 10px;
 }
 .m7 div:first-child{
     background:#a6167d;
