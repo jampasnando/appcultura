@@ -43,6 +43,7 @@ ion-row ion-col:nth-child(2){
 }
 ion-row{
     margin-top: 20px;
+    border-bottom: 1px solid darkslategray;
 }
 .portada{
     position: relative;
@@ -64,4 +65,8 @@ ion-row{
 }
 ion-col img{
     height: 3em;
+}
+.btnmapa{
+    visibility:hidden !important;
+    position: absolute;
 }

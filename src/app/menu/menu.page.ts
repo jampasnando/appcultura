@@ -35,20 +35,22 @@ export class MenuPage implements OnInit {
         console.log("una cat: ", unacat.nombre," su imagen: ",unacat.imagen);
       }
       this.nrocat=data.data.length;
-      if((this.nrocat%2)==0){
-        this.limite=Math.floor(this.nrocat/2);
+      if(this.nrocat>0){
+        if((this.nrocat%2)==0){
+          this.limite=Math.floor(this.nrocat/2);
+        }
+        else{
+          this.limite=Math.floor(this.nrocat/2)+1;
+        }
+        for(let j=1;j<=this.limite;j++){
+          this.nros.push(j);
+        }
+        console.log("nros: ",this.nros);
+        console.log("primeraimagen: ",data.data[0].imagen);
+        this.primeraimagen=data.data[0].imagen;
+        this.datos=data.data;
+        console.log("leido de datos: ",this.datos[0].portada);
       }
-      else{
-        this.limite=Math.floor(this.nrocat/2)+1;
-      }
-      for(let j=1;j<=this.limite;j++){
-        this.nros.push(j);
-      }
-      console.log("nros: ",this.nros);
-      console.log("primeraimagen: ",data.data[0].imagen);
-      this.primeraimagen=data.data[0].imagen;
-      this.datos=data.data;
-      console.log("leido de datos: ",this.datos[0].portada);
     });
   }
 }

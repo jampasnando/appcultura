@@ -15,8 +15,8 @@ export class AgendaPage implements OnInit {
   }
   llamaServicioGestion(){
     this.gestionService.obtieneGestion().subscribe((data:any)=>{
-      console.log("gestion desde servicio: ",data[0].gestion);
-      this.gestion=data[0].gestion;
+      console.log("gestion desde servicio: ",data.gestion);
+      this.gestion=data.gestion;
     });
   }
 }

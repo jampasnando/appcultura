@@ -12,9 +12,12 @@ export class MapaPage implements OnInit {
   lat:number;
   lng:number;
   coord:string;
+  nombre:string;
+  descripcion1:string;
+  descripcion2:string;
   vector=[];
   myIcon = icon({
-    iconUrl: 'assets/images/myicon.png',
+    iconUrl: 'assets/images/myiconx.png',
     iconSize: [38, 95],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76],
@@ -36,6 +39,9 @@ export class MapaPage implements OnInit {
   }
   ngOnInit() {
     this.coord=this.activatedRoute.snapshot.paramMap.get("latlng");
+    this.nombre=this.activatedRoute.snapshot.paramMap.get("nombre");
+    this.descripcion1=this.activatedRoute.snapshot.paramMap.get("descripcion1");
+    this.descripcion2=this.activatedRoute.snapshot.paramMap.get("descripcion2");
     this.vector=this.coord.split(",");
     this.lat=parseFloat(this.vector[0]);
     this.lng=parseFloat(this.vector[1]);

@@ -21,4 +21,16 @@
 }
 .btnmapa{
     visibility:hidden !important;
+    position: absolute;
+}
+ion-card{
+    position: absolute;
+    display: flex;
+
+}
+.descripcion{
+    background: #413d49;
+    color: white;
+    font-size: 0.7em;
+    text-align: center
 }
