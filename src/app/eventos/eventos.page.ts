@@ -29,6 +29,7 @@ export class EventosPage implements OnInit {
       console.log("eventos recibidos del servicio: ",data);
       this.datos=data.data;
       this.nroeventos=this.datos.length;
+      
     });
   }
 

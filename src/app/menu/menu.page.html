@@ -15,6 +15,7 @@
     <ion-row *ngFor="let x of nros;let i=index">
       <ion-col [routerLink]="['/eventos',datos[2*i].portada,mes,datos[2*i].id,datos[2*i].nombre]"><img src="{{datos[2*i].imagen}}" alt=""><div>{{datos[2*i].nombre}}</div></ion-col>
       <ion-col [routerLink]="['/eventos',datos[x+i].portada,mes,datos[x+i].id,datos[x+i].nombre]" *ngIf="(x+i)<nrocat"><img src="{{datos[x+i].imagen}}" alt=""><div>{{datos[x+i].nombre}}</div></ion-col>
+      <ion-col *ngIf="(x+i)==nrocat"></ion-col>
     </ion-row>
   </ion-grid>
   <ion-card *ngIf="nrocat==0">
