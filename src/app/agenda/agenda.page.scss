@@ -1,6 +1,32 @@
 ion-content{
   --ion-background-color: #35313d;
 }
+.txtcentral{
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color:white;
+  text-align: center;
+  width: 100%;
+}
+.txtcentral > div div:first-child{
+  font-size: 1.8em;
+  font-weight: bold;
+  width: 60%;
+}
+.txtcentral > div div:nth-child(2){
+  text-align: center;
+  font-family: 'Fake Serif';
+  font-size: 5.5em;
+  margin-top: -0.2em;
+  // margin-right: 0.5em;
+}
+.txtcentral > div div:nth-child(2)::first-letter{
+  font-size: 1.3em;
+  // line-height: 1.8;
+}
 .page-centered-element {
     position: absolute;
     left: 0;
