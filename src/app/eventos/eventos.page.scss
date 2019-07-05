@@ -32,8 +32,8 @@ ion-row ion-col:first-child div:nth-child(3){
     font-size: 0.8em;
 }
 ion-grid{
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 ion-row ion-col:nth-child(2){
     // text-align: right;
@@ -62,7 +62,8 @@ ion-row{
 }
 .titportada div:first-child{
     font-family: 'Fake Serif';
-    font-size: 4.5em;
+    // font-size: 4.5em;
+    font-size: 17vw;
 }
 ion-col img{
     height: 3em;
