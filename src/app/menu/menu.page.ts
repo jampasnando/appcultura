@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CategoriasService } from '../service/categorias.service';
 import {GLOBAL} from '../global';
+import { Events } from '@ionic/angular';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.page.html',
@@ -17,7 +18,7 @@ export class MenuPage implements OnInit {
   primeraimagen='';
   datos:any[];
   meses=['','ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
-  constructor(private activatedRoute:ActivatedRoute,private categoriaService:CategoriasService) { }
+  constructor(private activatedRoute:ActivatedRoute,private categoriaService:CategoriasService,private events:Events) { }
 
   ngOnInit() {
     this.mes=this.activatedRoute.snapshot.paramMap.get('mes');
@@ -45,6 +46,10 @@ export class MenuPage implements OnInit {
         this.primeraimagen=data.data[0].imagen;
         this.datos=data.data;
       }
-    });
+    },
+      (err)=>{
+        this.events.publish('net:desconectado');
+      }
+    );
   }
 }
