@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GestionService } from '../service/gestion.service';
 import { AlertController, Events } from '@ionic/angular';
+import { GLOBAL } from '../global'
 
 @Component({
   selector: 'app-agenda',
@@ -9,6 +10,7 @@ import { AlertController, Events } from '@ionic/angular';
 })
 export class AgendaPage implements OnInit {
   gestion='';
+  imgfondo='';
   constructor(private gestionService:GestionService, private alertCtrl:AlertController, private events:Events) { }
 
   ngOnInit() {
@@ -16,8 +18,9 @@ export class AgendaPage implements OnInit {
   }
   llamaServicioGestion(){
     this.gestionService.obtieneGestion().subscribe((data:any)=>{
-      console.log("gestion desde servicio: ",data.gestion);
-      this.gestion=data.gestion;
+      console.log("gestion desde servicio: ",data.data.bgimg);
+      this.gestion=data.data.gestion.gestion;
+      this.imgfondo=GLOBAL.imgs.concat(data.data.bgimg);
     },
     (err)=>{
       console.log("error en el servicio");

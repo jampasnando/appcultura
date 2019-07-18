@@ -15,6 +15,7 @@ export class MapaPage implements OnInit {
   nombre:string;
   descripcion1:string;
   descripcion2:string;
+  extra:string;
   vector=[];
   myIcon = icon({
     iconUrl: 'assets/images/myiconx.png',
@@ -42,12 +43,13 @@ export class MapaPage implements OnInit {
     this.nombre=this.activatedRoute.snapshot.paramMap.get("nombre");
     this.descripcion1=this.activatedRoute.snapshot.paramMap.get("descripcion1");
     this.descripcion2=this.activatedRoute.snapshot.paramMap.get("descripcion2");
+    this.extra=this.activatedRoute.snapshot.paramMap.get("extra");
     this.vector=this.coord.split(",");
     this.lat=parseFloat(this.vector[0]);
     this.lng=parseFloat(this.vector[1]);
-    console.log("coordenada recibidas: ",this.coord);
-    console.log("lat: ",this.lat);
-    console.log("lng: ",this.lng);
+    // console.log("coordenada recibidas: ",this.coord);
+    // console.log("lat: ",this.lat);
+    // console.log("lng: ",this.lng);
     setTimeout(function(){
       document.getElementById("btnmapa").click(); 
     }, 1500);
