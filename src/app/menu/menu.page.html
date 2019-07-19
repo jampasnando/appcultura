@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  
+  <div class="fondox">
   <ion-grid *ngIf="nrocat>0">
     <ion-row *ngFor="let x of nros;let i=index">
       <ion-col [routerLink]="['/eventos',datos[2*i].portada,mes,datos[2*i].id,datos[2*i].nombre]"><img src="{{datos[2*i].imagen}}" alt=""><div>{{datos[2*i].nombre}}</div></ion-col>
@@ -25,4 +25,5 @@
   </ion-card>
   <div class="gestion"><div>{{gestion}}</div></div>
   <div class="mes"><div>{{meses[mes]}}</div></div>
+  </div>
 </ion-content>

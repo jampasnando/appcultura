@@ -16,6 +16,11 @@
 ion-content{
     --ion-background-color: #35313d;
 }
+.fondox{
+    width: 100%;
+    height: 100%;
+    background: #35313d;
+}
 ion-row ion-col:first-child div:first-child{
     color: white;
     font-family: Georgia;
@@ -34,6 +39,7 @@ ion-row ion-col:first-child div:nth-child(3){
 ion-grid{
     padding-left: 1em;
     padding-right: 1em;
+    background-color: #35313d;
 }
 ion-row ion-col:nth-child(2){
     // text-align: right;
