@@ -10,58 +10,23 @@
         <!-- <div class="divimg"><img src="/assets/images/artex.png" alt=""></div> -->
         <div class="divimg"><img src="{{imgfondo}}" alt=""></div>  
         <div class="meses">
-          <div class="m1">
-            <div class="a"></div>
-            <div class="redondoa" [routerLink]="['/menu',1,gestion]">ENE</div>
-          </div>
-          <div class="m2">
-            <div class="a"></div>
-            <div class="redondoa" [routerLink]="['/menu',2,gestion]">FEB</div>
-          </div>
-          <div class="m3">
-            <div class="a"></div>
-            <div class="redondoa" [routerLink]="['/menu',3,gestion]">MAR</div>
-          </div>
-          <div class="m4">
-            <div class="a"></div>
-            <div class="redondoa" [routerLink]="['/menu',4,gestion]">ABR</div>
-          </div>
-          <div class="m5">
-              <div class="a"></div>
-              <div class="redondoa" [routerLink]="['/menu',5,gestion]">MAY</div>
-          </div>
-          <div class="m6">
-            <div class="a"></div>
-            <div class="redondoa" [routerLink]="['/menu',6,gestion]">JUN</div>
+          <div class="m{{i+1}}" *ngFor="let uno of nroeventosmes; let i=index" >
+            <div class="a" *ngIf="i<6"></div>
+            <div class="redondoa" [routerLink]="['/menu',i+1,gestion]" *ngIf="i<6 && nroeventosmes[i+1]>0">{{meses[i+1]}}</div>
+            <div class="redondoa nada" *ngIf="i<6 && nroeventosmes[i+1]===0">{{meses[i+1]}}</div>
           </div>
         </div>
+        
         <div class="meses2">
-            <div class="m7">
-              <div class="b"></div>
-              <div class="redondob" [routerLink]="['/menu',7,gestion]">JUL</div>
+            <div class="m{{i+7}}" *ngFor="let uno of nroeventosmes2; let i=index" >
+                <div class="b" *ngIf="i<6"></div>
+                <div class="redondob" [routerLink]="['/menu',i+7,gestion]" *ngIf="i<6 && nroeventosmes2[i+1]>0">{{meses[i+7]}}</div>
+                <div class="redondob nada" *ngIf="i<6 && nroeventosmes2[i+1]===0">{{meses[i+7]}}</div>
             </div>
-            <div class="m8">
-              <div class="b"></div>
-              <div class="redondob" [routerLink]="['/menu',8,gestion]">AGO</div>
-            </div>
-            <div class="m9">
-              <div class="b"></div>
-              <div class="redondob"  [routerLink]="['/menu',9,gestion]">SEP</div>
-            </div>
-            <div class="m10">
-              <div class="b"></div>
-              <div class="redondob" [routerLink]="['/menu',10,gestion]">OCT</div>
-            </div>
-            <div class="m11">
-                <div class="b"></div>
-                <div class="redondob" [routerLink]="['/menu',11,gestion]">NOV</div>
-            </div>
-            <div class="m12">
-              <div class="b"></div>
-              <div class="redondob" [routerLink]="['/menu',12,gestion]">DIC</div>
-            </div>
-          </div>
-          <div class="gestion"><div>{{this.gestion}}</div></div>
+            
+        </div>
+        <div class="gestion"><div>{{this.gestion}}</div></div>
+        <div class="concursos">CONCURSOS</div>
       </div>
     </div>
     

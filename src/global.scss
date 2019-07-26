@@ -40,3 +40,14 @@
     font-weight: 400;
     src: url('assets/fonts/fake_serif/FakeSerif.ttf');
 }
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip{
+    background-color: #4e4c52!important;
+    color: white!important;
+}
+.leaflet-popup-content a{
+    font-style: italic!important;
+}
+.leaflet-popup-content a:link,.leaflet-popup-content a:visited{
+    color: white!important;
+}

@@ -5,15 +5,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AgendaPage } from './agenda.page';
-import { GestionService } from '../service/gestion.service';
-import { HttpClientModule } from '@angular/common/http';
+import { Mapa2Page } from './mapa2.page';
 import { CategoriasService } from '../service/categorias.service';
+import { HttpClientModule } from '@angular/common/http';
+import { EventosService } from '../service/eventos.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: AgendaPage
+    component: Mapa2Page
   }
 ];
 
@@ -22,12 +22,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    HttpClientModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule
   ],
-  declarations: [AgendaPage],
-  providers:[
-    GestionService,CategoriasService
-  ]
+  declarations: [Mapa2Page],
+  providers:[CategoriasService,EventosService]
 })
-export class AgendaPageModule {}
+export class Mapa2PageModule {}

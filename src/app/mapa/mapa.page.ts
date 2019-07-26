@@ -35,7 +35,8 @@ export class MapaPage implements OnInit {
     }).addTo(this.map);
 
     const markPoint = marker([this.lat,this.lng],{icon:this.myIcon});
-    // markPoint.bindPopup(this.subAlcadias[this.datos].title);
+    // markPoint.bindPopup("&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a><br>&#9654; <a href='whatsapp://send?phone=+591 79760327'>Whatsapp<a>");
+    markPoint.bindPopup("&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a>");
     this.map.addLayer(markPoint);
   }
   ngOnInit() {
