@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'eventos/:portada/:mes/:idcat/:nombre', loadChildren: './eventos/eventos.module#EventosPageModule' },
   { path: 'mapa/:latlng/:nombre/:descripcion1/:descripcion2/:extra', loadChildren: './mapa/mapa.module#MapaPageModule' },
   { path: 'mapa2/:mes/:gestion', loadChildren: './mapa2/mapa2.module#Mapa2PageModule' },
+  { path: 'concursos', loadChildren: './concursos/concursos.module#ConcursosPageModule' },
 ];
 
 @NgModule({

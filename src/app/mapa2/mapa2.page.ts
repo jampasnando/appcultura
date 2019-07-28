@@ -55,7 +55,7 @@ export class Mapa2Page implements OnInit {
         var idcat=unacat.id;
         this.obtieneEventos(idcat);
       }
-    },
+    },      
     (err)=>{
       this.events.publish("El servicio de categorías no está disponible ahora");
     }
@@ -76,6 +76,7 @@ export class Mapa2Page implements OnInit {
         }
         // markPoint.bindPopup(unevento.nombre + "<br>" + unevento.descripcion1 + "<br>" + unevento.descripcion2 + "<br><span style='color:yellow'>" + extra+ "</span>"+"<br>&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a>&nbsp;&nbsp;&nbsp;&nbsp; &#9654; <a href='whatsapp://send?phone=+591 79760327'>Whatsapp<a>");
         markPoint.bindPopup(unevento.nombre + "<br>" + unevento.descripcion1 + "<br>" + unevento.descripcion2 + "<br><span style='color:yellow'>" + extra+ "</span>"+"<br>&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a>");
+        // markPoint.bounce();
         this.map.addLayer(markPoint);
         console.log(unevento);
       }
