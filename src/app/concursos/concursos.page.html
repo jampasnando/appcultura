@@ -20,14 +20,17 @@
     </div>
   </div>
   <ion-grid>
-    <ion-row *ngFor="let unevento of datos;let i=index" [routerLink]="['/mapa',unevento.coordenadas,unevento.nombre,unevento.descripcion1,unevento.descripcion2,unevento.extra]">
+    <ion-row *ngFor="let unevento of datos;let i=index" >
       <ion-col size="10">
-        <div>{{unevento.nombre}}</div>
-        <div>{{unevento.descripcion1}}</div>
-        <div>{{unevento.descripcion2}}</div>
-        <div *ngIf="unevento.extra!='vacio'" class="extra">{{unevento.extra}}</div>
+        <div [routerLink]="['/mapa',unevento.coordenadas,unevento.nombre,unevento.descripcion1,unevento.descripcion2,unevento.extra]">
+          <div>{{unevento.nombre}}</div>
+          <div>{{unevento.descripcion1}}</div>
+          <div>{{unevento.descripcion2}}</div>
+          <div *ngIf="unevento.extra!='vacio'" class="extra">{{unevento.extra}}</div>
+        </div>
+        <div class="enlace" *ngIf="unevento.link_txt!=null && unevento.link_url!=null && unevento.link_txt!='null' && unevento.link_url!='null' && unevento.link_txt!='' && unevento.link_url!=''">&#9654; <a href="{{unevento.link_url}}">{{unevento.link_txt}}</a> </div>
       </ion-col>
-      <ion-col size="2"><img src="/assets/images/marcador.png" alt=""></ion-col>
+      <ion-col size="2"><img src="/assets/images/marcador.png" alt="" [routerLink]="['/mapa',unevento.coordenadas,unevento.nombre,unevento.descripcion1,unevento.descripcion2,unevento.extra]"></ion-col>
     </ion-row>
   </ion-grid>
 </div>

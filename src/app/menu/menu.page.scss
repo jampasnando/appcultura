@@ -22,10 +22,11 @@ ion-content{
     height: 100%;
     position: absolute;
 }
-ion-grid{
-    padding-left: 3.7em;
-    padding-right: 3.7em;
-}
+
+// ion-grid{
+//     padding-left: 2em;
+//     padding-right: 2em;
+// }
 ion-col{
     text-align: center;
     
@@ -92,4 +93,13 @@ ion-card{
 }
 .iconomapa{
     height: 10vw;
+}
+.nombre{
+    text-transform: capitalize;
+}
+.espacios{
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    color:orange;
 }

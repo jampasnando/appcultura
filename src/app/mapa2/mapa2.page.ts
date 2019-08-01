@@ -42,6 +42,8 @@ export class Mapa2Page implements OnInit {
     this.map = new Map('mimapa').setView([this.lat,this.lng], 13);
 
     tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom:22,
+      maxNativeZoom: 19
     }).addTo(this.map);
 
     // const markPoint = marker([this.lat,this.lng],{icon:this.myIcon});
@@ -52,8 +54,12 @@ export class Mapa2Page implements OnInit {
   obtieneCategorias(){
     this.categoriaService.obtienecategorias(this.mes).subscribe((data:any)=>{
       for(let unacat of data.data){
-        var idcat=unacat.id;
-        this.obtieneEventos(idcat);
+        
+        if(unacat.nombre=="ESPACIOS CULTURALES"){
+          var idcat=unacat.id;
+          this.obtieneEventos(idcat);
+        }
+          
       }
     },      
     (err)=>{
@@ -62,6 +68,7 @@ export class Mapa2Page implements OnInit {
     );
   }
   obtieneEventos(idcat){
+    // this.mes="8";
     this.eventosService.obtieneEventos(this.mes,idcat).subscribe((data2:any)=>{
       
       for(let unevento of data2.data){
@@ -71,11 +78,17 @@ export class Mapa2Page implements OnInit {
         this.lng=parseFloat(this.vector[1]);
         var markPoint = marker([this.lat,this.lng],{icon:this.myIcon});
         var extra="";
-        if(unevento.extra!=null && unevento.extra!="null"){
+        var enlace_txt="";
+        var enlace_url=""
+        if(unevento.extra!=null && unevento.extra!="null" && unevento.extra!=""){
           extra=unevento.extra;
         }
+        if(unevento.link_txt!="null" && unevento.link_url!="null" && unevento.link_txt!=null && unevento.link_url!=null && unevento.link_txt!="" && unevento.link_url!=""){
+          enlace_txt=unevento.link_txt;
+          enlace_url=unevento.link_url;
+        }
         // markPoint.bindPopup(unevento.nombre + "<br>" + unevento.descripcion1 + "<br>" + unevento.descripcion2 + "<br><span style='color:yellow'>" + extra+ "</span>"+"<br>&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a>&nbsp;&nbsp;&nbsp;&nbsp; &#9654; <a href='whatsapp://send?phone=+591 79760327'>Whatsapp<a>");
-        markPoint.bindPopup(unevento.nombre + "<br>" + unevento.descripcion1 + "<br>" + unevento.descripcion2 + "<br><span style='color:yellow'>" + extra+ "</span>"+"<br>&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a>");
+        markPoint.bindPopup(unevento.nombre + "<br>" + unevento.descripcion1 + "<br>" + unevento.descripcion2 + "<br><span style='color:yellow'>" + extra+ "</span>"+"<div><a href='"+enlace_url+"'>"+enlace_txt+"</a></div><div style='text-align:right'><span>&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a></span></div>");
         // markPoint.bounce();
         this.map.addLayer(markPoint);
         console.log(unevento);

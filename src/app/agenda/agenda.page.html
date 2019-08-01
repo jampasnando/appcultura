@@ -9,6 +9,7 @@
       <div class="contenido">
         <!-- <div class="divimg"><img src="/assets/images/artex.png" alt=""></div> -->
         <div class="divimg"><img src="{{imgfondo}}" alt=""></div>  
+        
         <div class="meses">
           <div class="m{{i+1}}" *ngFor="let uno of nroeventosmes; let i=index" >
             <div class="a" *ngIf="i<6"></div>
@@ -19,14 +20,14 @@
         
         <div class="meses2">
             <div class="m{{i+7}}" *ngFor="let uno of nroeventosmes2; let i=index" >
-                <div class="b" *ngIf="i<6"></div>
+                <div class="b" *ngIf="i<6"></div>y
                 <div class="redondob" [routerLink]="['/menu',i+7,gestion]" *ngIf="i<6 && nroeventosmes2[i+1]>0">{{meses[i+7]}}</div>
                 <div class="redondob nada" *ngIf="i<6 && nroeventosmes2[i+1]===0">{{meses[i+7]}}</div>
             </div>
             
         </div>
         <div class="gestion"><div>{{this.gestion}}</div></div>
-        <div class="concursos" routerLink="/concursos">&#9654; CONCURSOS</div>
+        <div class="concursos" routerLink="/concursos"> CONCURSOS</div>
       </div>
     </div>
     

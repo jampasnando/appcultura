@@ -13,14 +13,13 @@ export class EventosPage implements OnInit {
   nombre:string;
   nroeventos:number;
   datos:any[];
- 
   constructor(private activatedRoute:ActivatedRoute,private eventosService:EventosService) { }
 
   ngOnInit() {
     this.portada=this.activatedRoute.snapshot.paramMap.get('portada');
     this.mes=this.activatedRoute.snapshot.paramMap.get('mes');
     this.idcat=this.activatedRoute.snapshot.paramMap.get('idcat');
-    this.nombre=this.activatedRoute.snapshot.paramMap.get('nombre');
+    this.nombre=this.activatedRoute.snapshot.paramMap.get('nombre').toLowerCase();
     console.log("portada: ", this.portada," mes: ", this.mes, " idcat: ",this.idcat);
     this.llamaServicioEventos(this.mes,this.idcat);
   }
@@ -33,7 +32,8 @@ export class EventosPage implements OnInit {
         if(this.datos[i].extra==null){
           this.datos[i].extra="vacio";
         }
-        // console.log(this.datos[i]);
+
+         console.log(this.datos[i]);
       }
     });
   }

@@ -70,6 +70,7 @@ ion-row{
     font-family: 'Fake Serif';
     // font-size: 4.5em;
     font-size: 17vw;
+    text-transform: capitalize;
 }
 ion-col img{
     height: 3em;
@@ -84,4 +85,7 @@ ion-col img{
 }
 .portada {
     min-height: 20%;
+}
+.enlace a:link, .enlace a:visited{
+    color: rgb(243, 240, 240);
 }

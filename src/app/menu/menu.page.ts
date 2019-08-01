@@ -30,6 +30,7 @@ export class MenuPage implements OnInit {
       for(let unacat of data.data){
         unacat.imagen=GLOBAL.imgs.concat(unacat.imagen);
         unacat.portada=GLOBAL.imgs.concat(unacat.portada);
+        unacat.nombre=unacat.nombre.toLowerCase();
       }
       
       this.nrocat=data.data.length;
