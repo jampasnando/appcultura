@@ -20,12 +20,12 @@ export class EventosPage implements OnInit {
     this.mes=this.activatedRoute.snapshot.paramMap.get('mes');
     this.idcat=this.activatedRoute.snapshot.paramMap.get('idcat');
     this.nombre=this.activatedRoute.snapshot.paramMap.get('nombre').toLowerCase();
-    console.log("portada: ", this.portada," mes: ", this.mes, " idcat: ",this.idcat);
+    // console.log("portada: ", this.portada," mes: ", this.mes, " idcat: ",this.idcat);
     this.llamaServicioEventos(this.mes,this.idcat);
   }
   llamaServicioEventos(mes,idcat){
     this.eventosService.obtieneEventos(mes,idcat).subscribe((data:any)=>{
-      console.log("eventos recibidos del servicio: ",data);
+      // console.log("eventos recibidos del servicio: ",data);
       this.datos=data.data;
       this.nroeventos=this.datos.length;
       for(let i=0;i<this.nroeventos;i++){
@@ -33,7 +33,7 @@ export class EventosPage implements OnInit {
           this.datos[i].extra="vacio";
         }
 
-         console.log(this.datos[i]);
+        //  console.log(this.datos[i]);
       }
     });
   }

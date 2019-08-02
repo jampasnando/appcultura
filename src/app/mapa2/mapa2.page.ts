@@ -91,7 +91,7 @@ export class Mapa2Page implements OnInit {
         markPoint.bindPopup(unevento.nombre + "<br>" + unevento.descripcion1 + "<br>" + unevento.descripcion2 + "<br><span style='color:yellow'>" + extra+ "</span>"+"<div><a href='"+enlace_url+"'>"+enlace_txt+"</a></div><div style='text-align:right'><span>&#9654; <a href='https://www.google.com/maps/dir/?api=1&destination="+this.lat+","+this.lng+"&travelmode=driving'>Cómo llegar</a></span></div>");
         // markPoint.bounce();
         this.map.addLayer(markPoint);
-        console.log(unevento);
+        // console.log(unevento);
       }
     },
     (err)=>{
