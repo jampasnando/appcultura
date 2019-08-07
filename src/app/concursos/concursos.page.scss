@@ -1,0 +1,90 @@
+.cabecera{
+    text-align: center;
+}
+.cabecera img:first-child{
+    height: 3em;
+}
+.cabecera img:nth-child(2){
+    height: 1em;
+    position: relative;
+    top: -0.5em;
+}
+.cabecera img:nth-child(3){
+    height: 2.5em;
+    margin-left: 2.5em;
+}
+ion-content{
+    --ion-background-color: #35313d;
+}
+.fondox{
+    width: 100%;
+    height: 100%;
+    background: #35313d;
+}
+ion-row ion-col:first-child div:first-child{
+    color: white;
+    font-family: Georgia;
+    font-size: 1em;
+}
+ion-row ion-col:first-child div:nth-child(2){
+    color: white;
+    font-family: 'Lucida Sans';
+    font-size: 0.8em;
+}
+ion-row ion-col:first-child div:nth-child(3){
+    color: white;
+    font-family: 'Lucida Sans';
+    font-size: 0.8em;
+}
+ion-grid{
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #35313d;
+}
+ion-row ion-col:nth-child(2){
+    // text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ion-row{
+    // margin-top: 20px;
+    padding: 5px 0;
+    border-bottom: 1px solid darkslategray;
+}
+.portada{
+    position: relative;
+    background:rgba(220,20,60,0.5)
+}
+.titportada{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color:white;
+    padding-top: 1em;
+    background:rgba(139,0,0,0.4)
+}
+.titportada div:first-child{
+    font-family: 'Fake Serif';
+    // font-size: 4.5em;
+    font-size: 17vw;
+}
+ion-col img{
+    height: 3em;
+}
+.btnmapa{
+    visibility:hidden !important;
+    position: absolute;
+}
+.extra{
+    color: red;
+    font-weight: bold;
+}
+.portada {
+    min-height: 20%;
+}
+.enlace a:link, .enlace a:visited{
+    color: rgb(243, 240, 240);
+}

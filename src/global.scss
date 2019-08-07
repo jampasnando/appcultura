@@ -1,0 +1,53 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+// @font-face{
+//     font-family: 'Caveat';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('assets/fonts/caveat/Caveat-Regular.ttf');
+// }
+// @font-face{
+//     font-family: 'Caveat';
+//     font-style: bold;
+//     font-weight: 600;
+//     src: url('assets/fonts/caveat/Caveat-Bold.ttf');
+// }
+// @font-face{
+//     font-family: 'tahu';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('assets/fonts//tahu/Tahu.ttf');
+// }
+// @font-face{
+//     font-family: 'aedesty';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('assets/fonts/aedesty/aedesty.ttf');
+// }
+@font-face{
+    font-family: 'Fake Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/fake_serif/FakeSerif.ttf');
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip{
+    background-color: #4e4c52!important;
+    color: white!important;
+}
+.leaflet-popup-content a{
+    font-style: italic!important;
+}
+.leaflet-popup-content a:link,.leaflet-popup-content a:visited{
+    color: white!important;
+}

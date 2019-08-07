@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start"><ion-back-button color="medium"></ion-back-button></ion-buttons>
+      <ion-buttons slot="end"><ion-button routerLink="/agenda"><img src="/assets/images/home1.png" width="32" alt=""> </ion-button> </ion-buttons>
+  <div class="cabecera">
+    <img src="/assets/images/escudo.png" alt="">
+    <img src="/assets/images/gobciudad.png" alt=""> 
+    <img src="/assets/images/unidoscrecemos.png" alt="">
+  </div>
+</ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="this.leafletMap()" id="btnmapa" class="btnmapa" >Ver Mapa</ion-button>
+  <div id="mimapa" class="conestilos"></div>
+  <div class="gestion"><div>{{gestion}}</div></div>
+  <!-- <div class="mes"><div>{{meses[mes]}}</div></div> -->
+  <div class="mes"><div>Espacios Culturales</div></div>
+</ion-content>

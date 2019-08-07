@@ -1,0 +1,225 @@
+ion-content{
+  --ion-background-color: #35313d;
+}
+.txtcentral{
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color:white;
+  text-align: center;
+  width: 100%;
+}
+@media only screen and (max-width:2000px){
+  .txtcentral > div div:first-child{
+    font-size: 4vw;
+    font-weight: bold;
+    width: 60%;
+  }
+  .txtcentral > div div:nth-child(2){
+    text-align: center;
+    font-family: 'Fake Serif';
+    font-size: 10vw;
+    margin-top: -0.2em;
+    // margin-right: 0.5em;
+  }
+  .txtcentral > div div:nth-child(2)::first-letter{
+    font-size: 1.3em;
+    // line-height: 1.8;
+  }
+  }
+@media only screen and (max-width:1400px){
+.txtcentral > div div:first-child{
+  font-size: 8vw;
+  font-weight: bold;
+  width: 60%;
+}
+.txtcentral > div div:nth-child(2){
+  text-align: center;
+  font-family: 'Fake Serif';
+  font-size: 25vw;
+  margin-top: -0.2em;
+  // margin-right: 0.5em;
+}
+.txtcentral > div div:nth-child(2)::first-letter{
+  font-size: 1.3em;
+  // line-height: 1.8;
+}
+}
+
+.page-centered-element {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .contenido {
+    text-align: center;
+    background: black;
+    height: 100%;
+    width: 100%;
+  }
+  .gestion{
+      position: absolute;
+      bottom: 50px;
+      right: 0;
+      height: 40px;
+      width: 100px;
+        background: #ed8147;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #ed8147, #eb6d2f);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #ed8147, #eb6d2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      text-align: center;
+      border-radius: 25px 0 0 25px;
+  }
+  
+  .gestion div{
+      font-size: 2.3em;
+      color: white;
+      text-align: center;
+      font-family: Impact;
+      line-height: 1.1em;
+    //   font-weight: bold;
+  }
+
+  .meses{
+      position: absolute;
+      bottom: -30px;
+      height: 120px;
+      width:100%;
+      text-align: left;
+      left:5px;
+  }
+  div.a {
+    right: 0;
+    top:0;
+    width: 30px;
+    height: 120px;
+    -ms-transform: rotate(28deg); /* IE 9 */
+    -webkit-transform: rotate(28deg); /* Safari 3-8 */
+    transform: rotate(28deg);
+    border-radius:25px 25px;
+    z-index: 1;
+  }
+  div.b {
+    right: 0;
+    top:0;
+    width: 30px;
+    height: 87px;
+    -ms-transform: rotate(28deg); /* IE 9 */
+    -webkit-transform: rotate(28deg); /* Safari 3-8 */
+    transform: rotate(28deg);
+    border-radius:25px 25px;
+    z-index: 1;
+  }
+  .redondoa{
+      border-radius:100% 100%;
+      background:white;
+      position: absolute;;
+      top:0;
+      left: 23px;
+      width:32px;
+      height:32px;
+      text-align:center;
+      word-wrap: normal;
+      font-size: 0.8em;
+      line-height:2.3em;
+      color:black;
+      z-index: 2;
+  }
+  .redondob{
+    border-radius:100% 100%;
+    background:white;
+    position: absolute;;
+    top:0;
+    left: 14px;
+    width:32px;
+    height:32px;
+    text-align:center;
+    word-wrap: normal;
+    font-size: 0.8em;
+    line-height:2.3em;
+    color:black;
+    z-index: 2;
+}
+  .m1,.m2,.m3,.m4,.m5,.m6{
+      position:relative;
+      display:inline-block;
+      width:30px;
+      margin-left: 2px;
+  }
+  .m1 div:first-child{
+      background:#f5d927;
+  }
+  .m2 div:first-child{
+      background:#f7af43;
+  }
+  .m3 div:first-child{
+      background:#eb6d2f;
+  }
+  .m4 div:first-child{
+      background:#cf1527;
+  }
+.m5 div:first-child{
+    background:#e685b2;
+}
+.m6 div:first-child{
+    background:#db007c;
+}
+.meses2{
+    position: absolute;
+    bottom: -62px;
+    height: 120px;
+    width:100%;
+    text-align: left;
+    left:5px;
+    }
+
+.m7,.m8,.m9,.m10,.m11,.m12{
+    position:relative;
+    display:inline-block;
+    width:30px;
+    left: 10px;
+    margin-left: 2px;
+}
+.m7 div:first-child{
+    background:#a6167d;
+}
+.m8 div:first-child{
+    background:#6e3e8a;
+}
+.m9 div:first-child{
+    background:#56c4f0;
+}
+.m10 div:first-child{
+    background:#00a5e0;
+}
+.m11 div:first-child{
+  background:#84c4a1;
+}
+.m12 div:first-child{
+  background:#009671;
+}
+.nada{
+  background: rgba(0,0,0,0.8)!important;
+  color: rgb(100, 100, 100)!important;
+  
+}
+.concursos{
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background:rgba(0,0,0,0.5);
+  font-weight: bold;
+  border-radius: 25px 25px;
+  padding: 7px 10px 5px 10px;
+  font-size: 4vw;
+  line-height: 0.5em;
+  color:#e7dede;
+  border: 1px dashed white;
+}
