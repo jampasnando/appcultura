@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EventosService } from '../service/eventos.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { File } from '@ionic-native/file/ngx';
 @Component({
   selector: 'app-eventos',
   templateUrl: './eventos.page.html',
@@ -13,7 +15,8 @@ export class EventosPage implements OnInit {
   nombre:string;
   nroeventos:number;
   datos:any[];
-  constructor(private activatedRoute:ActivatedRoute,private eventosService:EventosService) { }
+  mensaje:string;
+  constructor(private file:File, private socialSharing:SocialSharing, private activatedRoute:ActivatedRoute,private eventosService:EventosService) { }
 
   ngOnInit() {
     this.portada=this.activatedRoute.snapshot.paramMap.get('portada');
@@ -37,5 +40,22 @@ export class EventosPage implements OnInit {
       }
     });
   }
-
+  async resolveLocalFile() {
+    return this.file.copyFile(`${this.file.applicationDirectory}www/assets/images/`, 'compartirface.png', this.file.cacheDirectory, `${new Date().getTime()}.jpg`);
+  }
+ 
+  removeTempFile(name) {
+    this.file.removeFile(this.file.cacheDirectory, name);
+  }
+  async abreWhatsApp(indice) {
+    // Text + Image or URL works
+    let file= await this.resolveLocalFile();
+    this.mensaje="*" + this.datos[indice].nombre + "* \n\r" + this.datos[indice].descripcion1 + "\n\r" + this.datos[indice].descripcion2;
+    console.log(this.mensaje);
+    this.socialSharing.shareViaWhatsApp(this.mensaje, file.nativeURL, null).then(() => {
+      // Success
+    }).catch((e) => {
+      // Error!
+    });
+  }
 }

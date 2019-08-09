@@ -1,4 +1,17 @@
 <ion-content no-bounce>
+    <ion-fab vertical="top" horizontal="end">
+      <ion-fab-button color="dark" size="small" >
+          <ion-icon ios="ios-share" md="md-share"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="bottom">
+          <ion-fab-button>
+              <ion-icon ios="logo-whatsapp" md="logo-whatsapp" (click)="abreWhatsApp()"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button>
+              <ion-icon ios="logo-facebook" md="logo-facebook" (click)="abreFace()"></ion-icon>
+          </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
     <div class="txtcentral">
         <div>
           <div>AGENDA</div>
@@ -9,7 +22,10 @@
       <div class="contenido">
         <!-- <div class="divimg"><img src="/assets/images/artex.png" alt=""></div> -->
         <div class="divimg"><img src="{{imgfondo}}" alt=""></div>  
-        
+        <!-- <div class="social">
+          <div class="whatsapp"><img src="/assets/images/whatsapp.png" alt="" (click)="abreWhatsApp()"></div>
+          <div class="face"><img src="/assets/images/facebook.png" alt="" (click)="abreFace()"></div>
+        </div> -->
         <div class="meses">
           <div class="m{{i+1}}" *ngFor="let uno of nroeventosmes; let i=index" >
             <div class="a" *ngIf="i<6"></div>

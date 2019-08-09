@@ -3,6 +3,8 @@ import { GestionService } from '../service/gestion.service';
 import { AlertController, Events } from '@ionic/angular';
 import { GLOBAL } from '../global'
 import { CategoriasService } from '../service/categorias.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-agenda',
@@ -14,8 +16,9 @@ export class AgendaPage implements OnInit {
   imgfondo='';
   nroeventosmes=[];
   nroeventosmes2=[];
+  mensaje:string;
   meses=['','ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
-  constructor(private categoriasService:CategoriasService, private gestionService:GestionService, private alertCtrl:AlertController, private events:Events) { }
+  constructor(private file:File, private socialSharing:SocialSharing, private categoriasService:CategoriasService, private gestionService:GestionService, private alertCtrl:AlertController, private events:Events) { }
 
   ngOnInit() {
     this.llamaServicioGestion();
@@ -50,5 +53,35 @@ export class AgendaPage implements OnInit {
         this.nroeventosmes2[j]=data.data.length;
     });
   }
-  
+  async abreWhatsApp(indice) {
+    // Text + Image or URL works
+    let file = await this.resolveLocalFile();
+    this.mensaje="Agenda Cultural Cbba\n\r *Android:* https://play.google.com/store/apps/details?id=com.gamc.com \n\r *IOS:* https://apps.apple.com/bo/app/agenda-cultural-cbba/id1475196824";
+    console.log(this.mensaje);
+    this.socialSharing.shareViaWhatsApp(this.mensaje, file.nativeURL, null).then(() => {
+      // Success
+    }).catch((e) => {
+      // Error!
+    });
+  }
+  async resolveLocalFile() {
+    return this.file.copyFile(`${this.file.applicationDirectory}www/assets/images/`, 'compartirface.png', this.file.cacheDirectory, `${new Date().getTime()}.jpg`);
+  }
+ 
+  removeTempFile(name) {
+    this.file.removeFile(this.file.cacheDirectory, name);
+  }
+  async abreFace() {
+    let file = await this.resolveLocalFile();
+    // this.socialSharing.shareViaFacebook(null, null, "https://play.google.com/store/apps/details?id=com.gamc.com").then(() => {
+    //   this.removeTempFile(file.name);
+    // }).catch((e) => {
+    //   // Error!
+    // });
+    this.socialSharing.shareViaFacebook(null, null, "http://www.sistembo.com/testimg.php").then(() => {
+      this.removeTempFile(file.name);
+    }).catch((e) => {
+      // Error!
+    });
+  }
 }

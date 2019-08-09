@@ -30,6 +30,7 @@ ion-row ion-col:first-child div:nth-child(2){
     color: white;
     font-family: 'Lucida Sans';
     font-size: 0.8em;
+    padding-right: 1.5em;
 }
 ion-row ion-col:first-child div:nth-child(3){
     color: white;
@@ -37,8 +38,8 @@ ion-row ion-col:first-child div:nth-child(3){
     font-size: 0.8em;
 }
 ion-grid{
-    padding-left: 1em;
-    padding-right: 1em;
+    // padding-left: 1em;
+    // padding-right: 1em;
     background-color: #35313d;
 }
 ion-row ion-col:nth-child(2){
@@ -80,12 +81,27 @@ ion-col img{
     position: absolute;
 }
 .extra{
-    color: red;
+    color: gold;
     font-weight: bold;
+    font-size: 0.8em;
+    // font-family: 'Lucida Sans';
 }
 .portada {
     min-height: 20%;
 }
+.enlace{
+    margin-top: 0.3em;
+}
 .enlace a:link, .enlace a:visited{
     color: rgb(243, 240, 240);
+}
+.whatsapp{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.whatsapp img{
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50% 50%;
 }
